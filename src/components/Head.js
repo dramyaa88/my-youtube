@@ -25,7 +25,7 @@ const Head = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [searchQuery]);
+  }, [searchQuery]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getSearchSuggestion = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
